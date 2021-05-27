@@ -78,4 +78,10 @@ Each of these commands includes the `secret.tfvars` containing the sensitive var
 
 ## Results
 
-You will see 5 virtual machines created with static IP addresses in vSphere, each running an Apache Web Server, and all 5 appearing in the AppDynamics controller. 
+You will see 5 virtual machines created with static IP addresses in vSphere, each running an Apache Web Server, and all 5 appearing in the AppDynamics controller.
+
+![List of Machine Agents](images/appd-machine-agents.png)
+
+Click the check box next to any of the servers and then click `View Details` to see the data reported by the Machine Agent to the AppDynamics Controller. In the example below, we see data reported by the Machine Agent on `apache-webserver-1`
+
+![Data Reported by the Machine Agent](images/appd-web-server-1.png)
