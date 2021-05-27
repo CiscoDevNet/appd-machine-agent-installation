@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/appd-machine-agent-installation)
+
 # Automated deployment of virtual machines and AppDynamics Machine Agent
  This solution is an example of how to get started with monitoring and observability using AppDynamics's Machine Agent. The example details how to use Terraform to deploy 5 virtual machines in vSphere followed by the installation of Apache and the AppDynamics Machine Agent using Ansible. After Terraform provisions the virtual machines, a provisioner within Terraform calls the Ansible playbook which installs Apache, Docker, and the AppDynamics Machine Agent.
 
