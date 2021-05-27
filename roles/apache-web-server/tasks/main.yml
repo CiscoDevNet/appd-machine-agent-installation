@@ -1,0 +1,24 @@
+---
+###############################################################
+# This role includes tasks for installing and starting httpd
+###############################################################
+
+- name: Install httpd
+  dnf:
+    name: httpd
+    state: installed
+    update_cache: yes
+
+- name: Copy a sample index.html file to /var/www/html
+  template:
+    src: roles/apache-web-server/templates/index.html
+    dest: /var/www/html/index.html
+    owner: apache
+    group: apache
+    mode: 0644
+    backup: yes
+
+- name: Start HTTPD
+  service:
+    name: httpd
+    state: started

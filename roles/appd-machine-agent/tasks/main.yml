@@ -1,0 +1,36 @@
+---
+###############################################################
+# This role installs the AppDynamics machine agent
+###############################################################
+
+- name: Copy the AppDynamics machine agent RPM to the target host
+  become: yes
+  get_url:
+    url: "https://download.appdynamics.com/download/prox/download-file/machine/21.5.0.3130/appdynamics-machine-agent-21.5.0.3130.x86_64.rpm"
+    #dest: /home/delgadm/appdynamics-machine-agent-21.5.0.3130.x86_64.rpm
+    dest: /home/delgadm/
+    mode: 0644
+    force_basic_auth: yes
+    headers: {Authorization: "{{ APPD_BEARER_TOKEN }}" }
+
+- name: Install the AppDynamics machine agent 
+  yum:
+    name: /home/delgadm/appdynamics-machine-agent-21.5.0.3130.x86_64.rpm
+    state: present
+    disable_gpg_check: yes
+
+- name: Copy the machine-agent controller-info.xml template
+  template:
+    src: roles/appd-machine-agent/templates/controller-info.xml.j2
+    dest: /opt/appdynamics/machine-agent/conf/controller-info.xml
+    owner: root
+    group: root
+    mode: 0777
+    backup: yes
+  notify:
+    - reload NetworkManager
+
+- name: Start the AppDynamics machine agent
+  service:
+    name: appdynamics-machine-agent
+    state: started

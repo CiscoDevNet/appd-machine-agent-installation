@@ -1,0 +1,11 @@
+---
+###############################################################
+# Variables for the AppDynamics machine agent
+###############################################################
+
+# AppDynamics Machine Agent controller-info.xml values
+CONTROLLER_HOST: "devnet.saas.appdynamics.com"
+CONTROLLER_PORT: 443
+ACCOUNT_NAME: "devnet"
+MACHINE_PATH: "San Jose|Building 20|da-compute Lab|"
+ACCOUNT_ACCESS_KEY: "v9rbzcfaot2s"

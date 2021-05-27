@@ -1,0 +1,34 @@
+---
+###############################################################
+# This playbook installs Docker and an Apache Web Server and
+# opens ports on the firewall
+###############################################################
+
+- name: Install and manage one or more Apache Web Server(s)
+  hosts: all
+  become: yes
+  tasks:
+    - name: Include group variables
+      include_vars:
+        file: variables.yml
+    - name: Configure /etc/resolv.conf
+      include_role:
+        name: resolv.conf
+      tags:
+        - configure_resolv_conf
+    - name: Install Docker
+      include_role:
+        name: docker
+      tags:
+        - install_docker_registry
+    - name: Open ports needed for Docker and Apache Web Server
+      include_role:
+        name: firewalld
+    - name: Install Apache
+      include_role:
+        name: apache-web-server
+      tags:
+        - install_apache
+    - name: Install the AppDynamics Machine agent
+      include_role:
+        name: appd-machine-agent

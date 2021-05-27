@@ -1,0 +1,36 @@
+---
+###############################################################
+# This playbook opens ports on the firewall and reloads
+# firewalld
+###############################################################
+
+- name: permit traffic in Public zone for Docker Registry
+  ansible.posix.firewalld:
+    zone: public
+    port: 5000/tcp
+    permanent: yes
+    state: enabled
+
+- name: permit traffic in Public zone for DNS UDP activities
+  ansible.posix.firewalld:
+    zone: public
+    port: 53/tcp
+    permanent: yes
+    state: enabled
+
+- name: permit traffic in Public zone for DNS port 53 server port
+  ansible.posix.firewalld:
+    zone: public
+    port: 53/tcp
+    permanent: yes
+    state: enabled
+
+- name: permit traffic on port 80 for Apache Web Server
+  ansible.posix.firewalld:
+    zone: public
+    port: 80/tcp
+    permanent: yes
+    state: enabled
+
+- name: Reload the firewall after changes are made
+  command: firewall-cmd --reload

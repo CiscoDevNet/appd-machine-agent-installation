@@ -1,0 +1,51 @@
+---
+###############################################################
+# This series of tasks in this role manages the installation of
+# Docker and a Docker registry.
+###############################################################
+
+# - name: Install yum-utils
+#   dnf:
+#     name: yum-utils
+#     state: present
+
+- name: Use dnf config-manager to add docker repo
+  command: "dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo"
+  #warn: false
+  args:
+    creates: /etc/yum.repos.d/docker-ce.repo
+  become: yes
+
+- name: Install Docker CE
+  dnf:
+    name: docker-ce
+    state: installed
+    update_cache: yes
+
+- name: Start Docker service
+  service:
+    name: docker
+    state: started
+
+# - name: Add Docker repo
+#   yum_repository:
+#     name: docker-ce
+#     description: docker-ce
+#     baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+#     gpgcheck: no
+
+# - name: Install Docker
+#   yum:
+#     name: docker-ce
+#     state: present
+
+# - name: Install Docker CLI
+#   yum:
+#     name: docker-ce-cli
+#     state: present
+
+# - name: Install containerd.io
+#   yum:
+#     name: containerd.io
+#     state: present
+
