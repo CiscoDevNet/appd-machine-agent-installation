@@ -134,12 +134,12 @@ To see details about the service, click the click the service and click `Details
 
 Now that you are collecting metrics for machines hosting applications and their infrastructure, check out how to integrate agents into applications with a hands-on sample.
 
-![Cloud Native Sample Bookinfo App Observability](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/bookinfo-cloudnative-sample)
+[Cloud Native Sample Bookinfo App Observability](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/bookinfo-cloudnative-sample)
 
 ## Related Sandbox
 
-![Cisco AppDynamics sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/9e056219-ab84-4741-9485-de3d3446caf2?diagramType=Topology)
+[Cisco AppDynamics sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/9e056219-ab84-4741-9485-de3d3446caf2?diagramType=Topology)
 
 ## Links to DevNet Learning Labs
 
-![AppDynamics Fundamentals](https://developer.cisco.com/learning/modules/appdynamics-fundamentals)
+[AppDynamics Fundamentals](https://developer.cisco.com/learning/modules/appdynamics-fundamentals)
