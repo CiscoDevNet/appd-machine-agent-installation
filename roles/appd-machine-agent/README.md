@@ -14,9 +14,13 @@ Role Variables
 The following variables need to be defined in the role itself or elsewhere:
 
 CONTROLLER_HOST:
+
 CONTROLLER_PORT:
+
 ACCOUNT_NAME: 
+
 MACHINE_PATH:
+
 ACCOUNT_ACCESS_KEY:
 
 These values, are all available from the AppDynamics Controller with the exception of `MACHINE_PATH`. This variables describes the machine's heirarchy and each word is separated by the pipe `|` character. For example `Building 1|Row 2|` (<- don't forget the trailing `|` as the hostname will follow that character.)
