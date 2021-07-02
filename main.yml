@@ -3,6 +3,10 @@
 # This playbook installs Docker and an Apache Web Server and
 # opens ports on the firewall
 ###############################################################
+#- name: Pause for 30 seconds and wait for all virtual machines to be up and running
+# Pause for 30 seconds and wait for all virtual machines to be up and running
+# -  pause:
+#     seconds: 30
 
 - name: Install and manage one or more Apache Web Server(s)
   hosts: all
@@ -16,12 +20,7 @@
         name: resolv.conf
       tags:
         - configure_resolv_conf
-    - name: Install Docker
-      include_role:
-        name: docker
-      tags:
-        - install_docker_registry
-    - name: Open ports needed for Docker and Apache Web Server
+    - name: Open ports needed for the Apache Web HTTP Server
       include_role:
         name: firewalld
     - name: Install Apache

@@ -4,12 +4,12 @@
 # firewalld
 ###############################################################
 
-- name: permit traffic in Public zone for Docker Registry
-  ansible.posix.firewalld:
-    zone: public
-    port: 5000/tcp
-    permanent: yes
-    state: enabled
+# - name: permit traffic in Public zone for Docker Registry
+#   ansible.posix.firewalld:
+#     zone: public
+#     port: 5000/tcp
+#     permanent: yes
+#     state: enabled
 
 - name: permit traffic in Public zone for DNS UDP activities
   ansible.posix.firewalld:
