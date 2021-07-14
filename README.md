@@ -1,8 +1,8 @@
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/appd-machine-agent-installation)
 
-|Technology|Category|Product|Languages|Title|Description|
-|----------|--------|-------|---------|-----|-----------|
-|Cloud|Data Center,Open Source|AppDynamics|Hashicorp Configuration Language (HCL)|Automated deployment of virtual machines and AppDynamics Machine Agent.|Main objective is to get started with monitoring your infrastructure by showing you an automated way of getting the AppDynamics agent installed.|
+|Technology|Category|Product|Languages|
+|----------|--------|-------|---------|
+|Cloud|Data Center,Open Source|AppDynamics|Hashicorp Configuration Language (HCL)|
 
 # Automated deployment of virtual machines and AppDynamics Machine Agent
  This solution is an example of how to get started with monitoring and observability using AppDynamics's Machine Agent. The example details how to:
@@ -105,8 +105,6 @@ Each Apache server has a custom `index.html` file that includes the hostname of 
 
 The five virtual machines also appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller.
 
-
-
 ![List of Machine Agents](images/appd-machine-agents.png)
 
 Click the check box next to any of the servers and then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. In the example below, we see data that is reported by the Machine Agent on `apache-webserver-1`.
@@ -117,17 +115,19 @@ Click the check box next to any of the servers and then click `View Details` to 
 
 Now that you have an Apache Web Server running and you have a Machine Agent onboard your newly created hosts, you can monitor HTTP as a service. Here's how:
 
-- Click `Servers` on the top navigation bar followed by `Service Availability` on the left-hand side of the AppDynamics controller user interface.
-- Click `Add`
-- Enter a name for the service availability check (see the values we used in the example below)
-- Enter a target address (a FQDN is needed to an A record in DNS is needed)
-- Select the server that is runs the check. In this case, we used `apache-web-server-2` to run a check against the HTTP service running on `apache-web-server-1`.
+1. Click `Servers` on the top navigation bar followed by `Service Availability` on the left-hand side of the AppDynamics controller user interface.
+2. Click `Add`
+3. Enter a name for the service availability check (see the values we used in the example below)
+4. Enter a target address (a FQDN is needed to an A record in DNS is needed)
+5. Select the server that is runs the check. In this case, we used `apache-web-server-2` to run a check against the HTTP service running on `apache-web-server-1`.
 
 ![HTTP Check](images/add-service-monitoring-page-1.png)
 
-- Next, click the `Response Validtor` tab followed by selecting `Add Response Validator`
-- Keep `Status Code` and select `Equals` for the condition followed by entering a value of `200`. Explore the other options to see how many other Response Validators you can come up with. We chose an HTTP response of 200 to keep things simple but there are so many others to choose from. See the example below.
-- Click Save
+6. Next, click the `Response Validtor` tab followed by selecting `Add Response Validator`.
+7. Keep `Status Code` and select `Equals` for the condition followed by entering a value of `200`. 
+8. Explore the other options to see how many other Response Validators you can come up with.
+   We chose an HTTP response of 200 to keep things simple but there are so many others to choose from. See the example below.
+9. Click Save
 
 ![HTTP Check](images/add-service-monitoring-page-2.png)
 
@@ -135,7 +135,7 @@ After saving the configuration, you are returned to the Service Availability pag
 
 ![Service Availability](images/appd-service-availability.png)
 
-To see details about the service, click the click the service and click `Details`.
+10. To see details about the service, click the click the service and click `Details`.
 
 ![Service Availability Details](images/appd-service-availability-details.png)
 
