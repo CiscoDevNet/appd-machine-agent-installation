@@ -1,17 +1,8 @@
----
-technology: cloud 
-category: 
-- data center, open source
-products: 
-- AppDynamics
-languages: 
-- HCL 
-title:
-- "Automated deployment of virtual machines and AppDynamics Machine Agent."
-description: "Main objective is to get started with monitoring your infrastructure by showing you an automated way of getting the AppDynamics agent installed."
----
-
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/CiscoDevNet/appd-machine-agent-installation)
+
+|Technology|Category|Product|Languages|Title|Description|
+|----------|--------|-------|---------|-----|-----------|
+|Cloud|Data Center,Open Source|AppDynamics|Hashicorp Configuration Language (HCL)|Automated deployment of virtual machines and AppDynamics Machine Agent.|Main objective is to get started with monitoring your infrastructure by showing you an automated way of getting the AppDynamics agent installed.|
 
 # Automated deployment of virtual machines and AppDynamics Machine Agent
  This solution is an example of how to get started with monitoring and observability using AppDynamics's Machine Agent. The example details how to:
