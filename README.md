@@ -42,7 +42,7 @@ Here is a list of variables you must include and define for each file.
   - CONTROLLER_HOST (the URI of the AppDynamics Controller)
   - CONTROLLER_PORT (typically 443)
   - ACCOUNT_NAME (AppDynamics Account Name)
-  - MACHINE_PATH (a hierarchy that is separated with a |. For example: San Jose|Rack1|)
+  - MACHINE_PATH (a hierarchy that is separated with a | For example: San Jose|Rack1|)
   - ACCOUNT_ACCESS_KEY (this value is available in the AppDynamics Controller)
   - APPD_BEARER_TOKEN (is the token that is derived from the available image download via cURL)
 
@@ -91,23 +91,25 @@ Each of these commands includes the `secret.tfvars` containing the sensitive var
 
 ### Virtual Machines
 
-You see five virtual machines that are created with static IP addresses in vSphere.
+alt="You see five virtual machines that are created with static IP addresses in vSphere."
 
 ![Virtual Machines](images/vsphere-virtual-machines.png)
 
 ### Apache Web Servers
 
-Each Apache server has a custom `index.html` file that includes the hostname of the machine.
+alt="Each Apache server has a custom `index.html` file that includes the hostname of the machine."
 
 ![Apache Server Result](images/apache-server-result.png)
 
 ### AppDynamics Controller
 
-The five virtual machines also appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller.
+alt="The five virtual machines appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller."
 
 ![List of Machine Agents](images/appd-machine-agents.png)
 
-Click the check box next to any of the servers and then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. In the example below, we see data that is reported by the Machine Agent on `apache-webserver-1`.
+Click the check box next to any of the servers and then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. 
+
+alt="You can see the data that is reported by the Machine Agent on `apache-webserver-1`."
 
 ![Data Reported by the Machine Agent](images/appd-web-server-1.png)
 
@@ -119,7 +121,8 @@ Now that you have an Apache Web Server running and you have a Machine Agent onbo
 2. Click `Add`
 3. Enter a name for the service availability check (see the values we used in the example below)
 4. Enter a target address (a FQDN is needed to an A record in DNS is needed)
-5. Select the server that is runs the check. In this case, we used `apache-web-server-2` to run a check against the HTTP service running on `apache-web-server-1`.
+5. Select the server that runs the check.  
+   In this case, `apache-web-server-2` is used to run a check against the HTTP service running on `apache-web-server-1`.
 
 ![HTTP Check](images/add-service-monitoring-page-1.png)
 
@@ -127,15 +130,17 @@ Now that you have an Apache Web Server running and you have a Machine Agent onbo
 7. Keep `Status Code` and select `Equals` for the condition followed by entering a value of `200`. 
 8. Explore the other options to see how many other Response Validators you can come up with.
    We chose an HTTP response of 200 to keep things simple but there are so many others to choose from. See the example below.
-9. Click Save
+9. Click Save.
 
 ![HTTP Check](images/add-service-monitoring-page-2.png)
 
-After saving the configuration, you are returned to the Service Availability page where you will see your newly created Service Availability check displayed. After a few minutes, you will data about the service reported back by the machine agent as it periodically checks the health of the HTTP service running on `apache-webserver-1`. The server running the check is listed under the `Server` column and the monitored service is listed in the `Monitored Service` column.
+After saving the configuration, you are returned to the Service Availability page where you will see your newly created Service Availability check displayed. After a few minutes, you will data about the service reported back by the machine agent as it periodically checks the health of the HTTP service running on `apache-webserver-1`. 
+
+alt="The server running the check is listed under the `Server` column and the monitored service is listed in the `Monitored Service` column."
 
 ![Service Availability](images/appd-service-availability.png)
 
-10. To see details about the service, click the click the service and click `Details`.
+10. To see details about the service, click the service and click `Details`.
 
 ![Service Availability Details](images/appd-service-availability-details.png)
 
