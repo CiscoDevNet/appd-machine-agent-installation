@@ -115,12 +115,12 @@ You can see the data that is reported by the Machine Agent on `apache-webserver-
 
 ### Extra Credit
 
-Now that you have an Apache Web Server running and you have a Machine Agent onboard your newly created hosts, you can monitor HTTP as a service. Here's how:
+Now that you have an Apache Web Server running and you have a Machine Agent onboarded your newly created hosts, you can monitor HTTP as a service. Here's how:
 
 1. Click `Servers` on the top navigation bar followed by `Service Availability` on the left-hand side of the AppDynamics controller user interface.
-2. Click `Add`
-3. Enter a name for the service availability check (see the values we used in the example below)
-4. Enter a target address (a FQDN is needed to an A record in DNS is needed)
+2. Click `Add`.
+3. Enter a name for the service availability check (see the values we used in the example below).
+4. Enter a target address (a FQDN is needed to an A record in DNS is needed).
 5. Select the server that runs the check.  
    In this case, `apache-web-server-2` is used to run a check against the HTTP service running on `apache-web-server-1`.
 
