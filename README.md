@@ -96,25 +96,25 @@ Each of these commands includes the `secret.tfvars` containing the sensitive var
 
 You see five virtual machines that are created with static IP addresses in vSphere.
 
-![Virtual Machines](images/vsphere-virtual-machines.png)
+<img src="images/vsphere-virtual-machines.png" alt="Virtual Machines">
 
 ### Apache Web Servers
 
 Each Apache server has a custom `index.html` file that includes the hostname of the machine.
-
-![Apache Server Result](images/apache-server-result.png)
+<img src="images/apache-server-result.png" alt="Apache Server Result">
 
 ### AppDynamics Controller
 
 The five virtual machines appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller.
 
-![List of Machine Agents](images/appd-machine-agents.png)
+<img src="images/appd-machine-agents.png" alt="List of Machine Agents">
 
 Click any of the check box available just before the `OS` column; then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. 
 
 You can see the data that is reported by the Machine Agent on `apache-webserver-1`.
 
-![Data Reported by the Machine Agent](images/appd-web-server-1.png)
+<img src="images/appd-web-server-1.png" alt="Data Reported by the Machine Agent">
+
 
 ### Extra Credit
 
@@ -127,7 +127,7 @@ Now that you have an Apache Web Server running and you have a Machine Agent onbo
 5. Select the server that runs the check.  
    In this case, `apache-web-server-2` is used to run a check against the HTTP service running on `apache-web-server-1`.
 
-![HTTP Check](images/add-service-monitoring-page-1.png)
+<img src="images/add-service-monitoring-page-1.png" alt="HTTP Check">
 
 6. Next, click the `Response Validtor` tab followed by selecting `Add Response Validator`.
 7. Keep `Status Code` and select `Equals` for the condition followed by entering a value of `200`. 
@@ -135,17 +135,17 @@ Now that you have an Apache Web Server running and you have a Machine Agent onbo
    We chose an HTTP response of 200 to keep things simple but there are so many others to choose from. See the example below.
 9. Click Save.
 
-![HTTP Check](images/add-service-monitoring-page-2.png)
+<img src="images/add-service-monitoring-page-2.png" alt="HTTP Check">
 
 After saving the configuration, you are returned to the Service Availability page where you will see your newly created Service Availability check displayed. After a few minutes, you will data about the service reported back by the machine agent as it periodically checks the health of the HTTP service running on `apache-webserver-1`. 
 
 The server running the check is listed under the `Server` column and the monitored service is listed in the `Monitored Service` column.
 
-![Service Availability](images/appd-service-availability.png)
+<img src="images/appd-service-availability.png" alt="Service Availability">
 
 10. To see details about the service, click the service and click `Details`.
 
-![Service Availability Details](images/appd-service-availability-details.png)
+<img src="images/appd-service-availability-details.png" alt="Service Availability Details">
 
 ## Related Repos
 
