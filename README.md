@@ -91,25 +91,25 @@ Each of these commands includes the `secret.tfvars` containing the sensitive var
 
 ### Virtual Machines
 
-alt="You see five virtual machines that are created with static IP addresses in vSphere."
+You see five virtual machines that are created with static IP addresses in vSphere.
 
 ![Virtual Machines](images/vsphere-virtual-machines.png)
 
 ### Apache Web Servers
 
-alt="Each Apache server has a custom `index.html` file that includes the hostname of the machine."
+Each Apache server has a custom `index.html` file that includes the hostname of the machine.
 
 ![Apache Server Result](images/apache-server-result.png)
 
 ### AppDynamics Controller
 
-alt="The five virtual machines appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller."
+The five virtual machines appear in the AppDynamics controller, each running an Apache Web Server, and all five appearing in the AppDynamics controller.
 
 ![List of Machine Agents](images/appd-machine-agents.png)
 
 Click the check box next to any of the servers and then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. 
 
-alt="You can see the data that is reported by the Machine Agent on `apache-webserver-1`."
+You can see the data that is reported by the Machine Agent on `apache-webserver-1`.
 
 ![Data Reported by the Machine Agent](images/appd-web-server-1.png)
 
@@ -136,7 +136,7 @@ Now that you have an Apache Web Server running and you have a Machine Agent onbo
 
 After saving the configuration, you are returned to the Service Availability page where you will see your newly created Service Availability check displayed. After a few minutes, you will data about the service reported back by the machine agent as it periodically checks the health of the HTTP service running on `apache-webserver-1`. 
 
-alt="The server running the check is listed under the `Server` column and the monitored service is listed in the `Monitored Service` column."
+The server running the check is listed under the `Server` column and the monitored service is listed in the `Monitored Service` column.
 
 ![Service Availability](images/appd-service-availability.png)
 
