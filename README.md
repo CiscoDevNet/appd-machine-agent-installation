@@ -107,7 +107,7 @@ The five virtual machines appear in the AppDynamics controller, each running an 
 
 ![List of Machine Agents](images/appd-machine-agents.png)
 
-Click the check box next to any of the servers and then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. 
+Click any of the check box available just before the `OS` column; then click `View Details` to see that the data reported by the Machine Agent to the AppDynamics Controller. 
 
 You can see the data that is reported by the Machine Agent on `apache-webserver-1`.
 
