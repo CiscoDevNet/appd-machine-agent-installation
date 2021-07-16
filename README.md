@@ -4,8 +4,6 @@
 |----------|--------|-------|---------|
 |Cloud|Data Center,Open Source|AppDynamics|Hashicorp Configuration Language (HCL)|
 
-<seodescription>Use case on how to automate five virtual machines using Terraform followed by installation and configuration of Apache HTTP Daemon and AppDynamics Machine Agent.</seodescription>
-
 # Automate deployment of virtual machines and AppDynamics Machine Agent
  This solution is an example of how to get started with monitoring and observability using AppDynamics's Machine Agent. The example details how to:
  * Use Terraform to deploy five virtual machines in vSphere followed by the installation of Apache and the AppDynamics Machine Agent using Ansible.
