@@ -98,6 +98,7 @@ You see five virtual machines that are created with static IP addresses in vSphe
 ### Apache Web Servers
 
 Each Apache server has a custom `index.html` file that includes the hostname of the machine.
+
 <img src="images/apache-server-result.png" alt="Apache Server Result">
 
 ### AppDynamics Controller
